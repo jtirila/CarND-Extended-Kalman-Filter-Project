@@ -107,7 +107,10 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
   if(fabs(c1) < 0.0001){
     cout << "CalculateJacobian () - Error - Division by Zero" << endl;
 
-    // FIXME: is this really what we want to do?
+    // TODO: is this really what we want to do? I guess we don't want the program to crash
+    // because of a measured (0, 0) location, so just use a zero matrix for that particular case. Should not be
+    // much of an issue anyway.
+    Hj << 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0;
     return Hj;
   }
 

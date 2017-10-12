@@ -14,7 +14,9 @@ This project is about implementing a sensor fusion Kalman filter to estimate the
 
 ## Some Notes Concerning My Solution
 
-I have not changed the template code layout that much. I made some changes, however.
+I have not changed the template code layout that much. Just implemented the TODOs. 
+
+I did make some changes, however, as summarized below.
 
  * I removed some member variable matrices from the `FusionEKF` class. In my opinion, these are conceptually 
    rather members of the `KalmanFilter` class and the ones used to initialise the `KalmanFilter` (`kf`)instance can just 

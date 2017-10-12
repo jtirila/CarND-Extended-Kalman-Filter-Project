@@ -2,7 +2,6 @@
 #define KALMAN_FILTER_H_
 #include "Eigen/Dense"
 #include "tools.h"
-// FIXME: remove when not needed anymore
 #include <iostream>
 
 class KalmanFilter {
